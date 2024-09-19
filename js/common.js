@@ -1,9 +1,9 @@
-document.getElementById('btn_add_money').addEventListener('click', function(e){
+document.getElementById('btn_cash_out').addEventListener('click', function(e){
   e.preventDefault();
   console.log("add clicked");
-  const pinNumber = document.getElementById('input_pin_number').value;
+  const pinNumber = document.getElementById('input_pin').value;
   
-  const amount = document.getElementById('input_amount').value;
+  const amount = document.getElementById('cash_amount').value;
   const inputAmount = parseFloat(amount);
   
   console.log(pinNumber, amount);
@@ -11,9 +11,10 @@ document.getElementById('btn_add_money').addEventListener('click', function(e){
   if(pinNumber === '1234'){
     const balance = document.getElementById('current_amount').innerText;
     const newBalance = parseFloat(balance);
-    const updatedBalance = newBalance + inputAmount;
+    const updatedBalance = newBalance - inputAmount;
     document.getElementById('current_amount').innerText = updatedBalance;
     
+
     
   
   }
