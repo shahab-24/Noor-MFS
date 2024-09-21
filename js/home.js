@@ -14,6 +14,10 @@ document.getElementById('btn_add_money').addEventListener('click', function(e){
     const updatedBalance = newBalance + inputAmount;
     document.getElementById('current_amount').innerText = updatedBalance;
     
+    // const p = document.createElement('p')
+    // p.innerText = `${amount} ${updatedBalance}`
+    
+    // document.getElementById('trans_container').appendChild(p)
     
   
   }
